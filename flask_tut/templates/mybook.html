@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2 class="my-4">My Issued Books</h2>
+<table class="table my-4">
+    <thead>
+      <tr>
+        
+        <th>BOOK ID</th>
+        <th>Usn</th>
+        <th>BOOK NAME</th>
+        <th>Issue Date</th>
+        <th>Return Date</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for data in issuebook %}
+      <tr>
+        
+        <td>{{data.book_id}}</td>
+        <td>{{data.usn}}</td>
+        <td>{{data.book_name}}</td>
+        <td>{{data.issue_date}}</td>
+        <td>{{data.return_date}}</td>
+    
+        
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
